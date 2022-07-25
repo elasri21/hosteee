@@ -1,0 +1,18 @@
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// colors
+$body-bg: #f9f7ee;
+$gray: #938f8f;
+$blue: #2379e8;
+$white: #fff;
+$yellow: #eaea94;
+$red: #d64e2c;
+
+// breakpoint
+$mobile: '(max-width: 767px)';
+$desktop: '(min-width: 922px)';
+$tablet: '(min-width: 768px) and (max-width: 921px)';

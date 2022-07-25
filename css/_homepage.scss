@@ -1,0 +1,149 @@
+.main-sec {
+    @media #{$desktop} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        .info {
+            width: 400px !important;
+
+        }
+    }
+    @media #{$tablet} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 50px;
+        .info {
+            width: 100% !important;
+            order: 2;
+        }
+        .illus {
+            order: 1;
+        }
+    }
+    @media #{$mobile} {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 15px;
+        .info {
+            order: 2;
+            width: 100%;
+            form {
+                flex-wrap: wrap;
+                input {
+                    display: block;
+                    width: 100%;
+                    &.email {
+                        margin-right: 0 !important;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .check {
+                justify-content: center !important;
+            }
+        } 
+        .illus {
+            order: 1;
+            align-self: center;
+        }
+    }
+
+    .info {
+        h1 {
+            font-size: 35px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+            font-family: 'Lato', sans-serif;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            color: $gray;
+            margin-bottom: 15px;
+        }
+        form {
+            width: 100%;
+            margin-bottom: 15px;
+            @extend %flex;
+            justify-content: stretch;
+            input {
+                border: none;
+                background: none;
+                outline: none;
+                padding: 10px;
+                border-radius: 4px;
+                &.email {
+                    background-color: $white;
+                    color: $gray;
+                    margin-right: 5px;
+                    &::placeholder {
+                        color: $gray;
+                    }
+                }
+                &.submit {
+                    background-color: $blue;
+                    color: $white;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+        .check {
+            img {
+                margin-right: 10px;
+            }
+            span {
+                font-size: 13px;
+                font-weight: 500;
+                color: $gray;
+            }
+        }
+    }
+    .illus {
+        
+        width: 300px;
+        height: 300px;
+        position: relative;
+        overflow: visible;
+        height: 300px;
+        
+        img {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+           &.blue {
+            z-index: 1;
+            transform: rotate(-40deg);
+            top: 0px;
+            left: -0px;
+
+           }
+           &.pink {
+            z-index: 2;
+            transform: rotate(-30deg);
+            top: 0px;
+            left: -0px;
+
+           }
+           &.purple {
+            z-index: 3;
+            transform: rotate(-20deg);
+            top: 0px;
+            left: -0px;
+
+
+           }
+           &.model {
+            z-index: 4;
+           }
+        }
+    }
+}

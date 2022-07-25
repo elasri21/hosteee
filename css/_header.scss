@@ -1,0 +1,170 @@
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+    @media #{$desktop} {
+        nav {
+            display: flex !important;
+            position: unset;
+            top: unset;
+            left: unset;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    margin-right: 15px;
+                }
+            }
+        }
+        .contacts {
+            display: block !important;
+        }
+        .hamburger {
+            display: none !important;
+        }
+        .close {
+            display: none !important;
+        }
+    }
+    @media #{$tablet} {
+        nav {
+            position: absolute;
+            height: 200px;
+            width: 97%;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border-radius: 4px;
+            background-color: $white;
+            text-align: center;
+            z-index: 11111;
+            ul {
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .contacts {
+            position: absolute;
+            top: 190px;
+            z-index: 1111111;
+            left: 50%;
+            transform: translateX(-50%);
+            button {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    @media #{$mobile} {
+        padding: 20px 15px;
+        nav {
+            height: 200px;
+            position: absolute;
+            width: 97%;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border-radius: 4px;
+            background-color: $white;
+            text-align: center;
+            z-index: 11111;
+            ul {
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .contacts {
+            position: absolute;
+            top: 190px;
+            z-index: 1111111;
+            left: 50%;
+            transform: translateX(-50%);
+            button {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .logo {
+        @extend %flex;
+        img {
+            margin-right: 5px;
+        }
+        span {
+            display: inline-block;
+            padding: 10px;
+            background: linear-gradient(to right, $yellow, $red);
+            border-radius: 20px;
+            color: $white;
+        }
+    }
+    nav {
+        display: none;
+        ul {
+            li {
+                margin-bottom: 15px;
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $gray;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .contacts {
+        display: none;
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px;
+            text-transform: capitalize;
+            transition: .3s ease-in-out;
+            &:hover {
+                opacity: .8;
+            }
+            &.sign {
+                color: $gray;
+            }
+            &.join {
+                background-color: $blue;
+                color: $white;
+                border-radius: 4px;
+            }
+        }
+    }
+    .hamburger {
+        display: block;
+        i {
+            font-size: 28px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+    .close {
+        display: none;
+        i {
+            font-size: 28px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+
+}
